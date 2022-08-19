@@ -24,7 +24,7 @@ const Title = () =>{
     return(
         <div className="accordion">
             {data.films.map((films : filmDetails) => (
-                <Accord title={films.title} id={films.id}/>
+                <Accord title={films.title} id={films.id} content={films.planetConnection.planets}/>
             ))}
 
         </div>
