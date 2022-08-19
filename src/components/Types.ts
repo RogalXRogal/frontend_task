@@ -5,7 +5,7 @@ export interface filmDetails {
 }
   
 export interface planetConnectionDetails {
-    planets: Array<planetDetails>,
+    planets: planetDetails[],
 }
   
 export interface planetDetails {
@@ -15,7 +15,6 @@ export interface planetDetails {
     rotationPeriod: number,
     orbitalPeriod : number,
     population: number,
-    climates: string | string[],
+    climates: string[],
     surfaceWater: number,
 }
-
