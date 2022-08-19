@@ -15,7 +15,9 @@ const Accord = ({title, id} : {title:string, id:string}) => {
                 <div>{title}</div>
                 <div> {isActive ? <ArrowClose/> : <ArrowOpen/>} </div>
             </div>
-            {isActive && <div className="accordion-content">lol</div>}
+            {isActive && <div className="accordion-content">{content.map((planet : planetDetails) => (
+                <li>{planet.name}</li>
+            ))}</div>}
         </div>
     );
 }
