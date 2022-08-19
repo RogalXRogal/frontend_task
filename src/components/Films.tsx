@@ -10,6 +10,18 @@ const getFilms = gql`
             films{
                 id
                 title
+                planetConnection{
+                    planets{
+                    id
+                    name
+                    rotationPeriod
+                    orbitalPeriod
+                    diameter
+                    climates
+                    surfaceWater
+                    population
+                    }
+                }
             }
         }
     }
