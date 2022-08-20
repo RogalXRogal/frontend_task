@@ -3,9 +3,7 @@ import Accordion from "./components/Accordion";
 import "./index.css";
 
 const App = () => {
-    return(
-        <Accordion />
-    )
-}
+  return <Accordion />;
+};
 
 export default App;
