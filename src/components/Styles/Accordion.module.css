@@ -1,0 +1,65 @@
+.spin {
+  top: 20em;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.accordion {
+  margin: 1rem auto;
+  background-color: #e0e6ee;
+  border-radius: 8px;
+  max-width: 790px;
+  padding: 30px;
+}
+
+.accordionTitle {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0px 2px 1px rgba(196, 196, 196, 0.2);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #00687f;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.accordionTitle:hover {
+  background-color: #3ab4cc;
+}
+
+.accordionTitle,
+.accordionContent {
+  padding: 1rem;
+}
+
+.accordionContent {
+  background-color: #fff;
+  margin-top: -18px;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: 150px auto auto auto auto auto auto;
+  column-gap: 10px;
+  row-gap: 30px;
+}
+
+.gridItem1 {
+  color: #00687f;
+  text-align: left !important;
+}
+
+.gridItem,
+.gridItem1 {
+  font-size: 12px;
+  font-weight: 400;
+  font-style: normal;
+  text-align: right;
+  word-break: break-all;
+}
