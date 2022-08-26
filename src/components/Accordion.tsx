@@ -6,20 +6,21 @@ import { filmDetails } from "./Types";
 import AccordionItem from "./AccordionItem";
 import Header from "./Header";
 import styles from "./Styles/Accordion.module.css";
+import stylesSpin from "./Styles/Spin.module.css";
 
 const Accordion = () => {
   //Data
   const { data, isLoading, error } = useFilms();
 
   //Style classes
-  const spin = `${styles.spin}`;
   const accordion = `${styles.accordion}`;
+  const spinPosition = `${stylesSpin.spinPosition}`;
 
   //Loading spin if data is loading
   if (isLoading) {
     return (
-      <div className={spin}>
-        <ReactLoading type="spin" color="black" height={100} width={100} />
+      <div className={spinPosition}>
+        <ReactLoading type="spin" color="black" width={100} height={100} />
       </div>
     );
   }
