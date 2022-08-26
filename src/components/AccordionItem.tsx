@@ -1,11 +1,11 @@
 import React from "react";
 import { useState } from "react";
 
+import { planetDetails } from "./Types";
 import ArrowClose from "./ArrowClose";
 import ArrowOpen from "./ArrowOpen";
-import ArrowSort from "./Assets/ARROWSORT.png";
-import { planetDetails } from "./Types";
 import styles from "./Styles/Accordion.module.css";
+import stylesGrid from "./Styles/Grid.module.css";
 
 const AccordionItem = ({
   title,
@@ -22,9 +22,9 @@ const AccordionItem = ({
   //Style classes
   const accordionTitle = `${styles.accordionTitle}`;
   const accordionContent = `${styles.accordionContent}`;
-  const gridContainer = `${styles.gridContainer}`;
-  const gridItem = `${styles.gridItem}`;
-  const gridItem1 = `${styles.gridItem1}`;
+  const gridContainer = `${stylesGrid.gridContainer}`;
+  const gridItem = `${stylesGrid.gridItem}`;
+  const gridItem1 = `${stylesGrid.gridItem1}`;
 
   return (
     <div className="accordion-item" key={id}>
