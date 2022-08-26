@@ -1,0 +1,19 @@
+.gridContainer {
+  display: grid;
+  grid-template-columns: 100px 100px auto auto auto auto auto;
+  row-gap: 30px;
+  overflow: hidden;
+}
+
+.gridItem1 {
+  color: #00687f;
+  text-align: left !important;
+}
+
+.gridItem,
+.gridItem1 {
+  font-size: 12px;
+  font-weight: 400;
+  font-style: normal;
+  text-align: right;
+}
