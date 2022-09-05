@@ -1,11 +1,11 @@
 import React from "react";
 import { useState } from "react";
 
-import { planetDetails } from "./Types";
-import ArrowClose from "./ArrowClose";
-import ArrowOpen from "./ArrowOpen";
 import styles from "./Styles/Accordion.module.css";
 import stylesGrid from "./Styles/Grid.module.css";
+
+import arrowClose from "./Assets/ARROWCLOSE.svg";
+import arrowOpen from "./Assets/ARROWOPEN.svg";
 
 const AccordionItem = ({
   title,
@@ -16,6 +16,16 @@ const AccordionItem = ({
   id: string;
   content: any;
 }) => {
+  interface planetDetails {
+    id: string;
+    name: string;
+    diameter: number;
+    rotationPeriod: number;
+    orbitalPeriod: number;
+    population: number;
+    climates: string[];
+    surfaceWater: number;
+  }
   //Accordion states
   const [isActive, setIsActive] = useState(false);
 
@@ -30,7 +40,13 @@ const AccordionItem = ({
     <div className="accordion-item" key={id}>
       <div className={accordionTitle} onClick={() => setIsActive(!isActive)}>
         <div>{title}</div>
-        <div> {isActive ? <ArrowClose /> : <ArrowOpen />} </div>
+        <div>
+          {isActive ? (
+            <img src={arrowClose} alt="arrow close" />
+          ) : (
+            <img src={arrowOpen} alt="arrow open" />
+          )}
+        </div>
       </div>
       {isActive && (
         <div className={accordionContent}>
